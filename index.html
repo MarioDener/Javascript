@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaMenu</title>
+	<style>
+		nav {
+			height: 50px;
+			background-color: #C5C5C5;
+			overflow: hidden;
+		}
+
+
+	</style>
+</head>
+<body>
+	<a href="" class="option">Atras</a>
+		<!-- <a href="" class="option">Adelante</a> -->
+	<nav id="nav">
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+			<li><a href="#">Link 5</a></li>
+			<li><a href="#">Link 6</a></li>
+			<li><a href="#">Link 7</a></li>
+			<li><a href="#">Link 8</a></li>
+			<li><a href="#">Link 9</a></li>
+			<li><a href="#">Link 10</a></li>
+		</ul>
+	</nav>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	var elementoDiv = document.getElementById('nav');
+	function moverAbajo() {
+	elementoDiv.style.top = elementoDiv.offsetTop + 10 +"px";
+	}
+
+	$(function(){
+		$(".option").click(function(event) {
+			event.preventDefault();
+			moverAbajo();
+		})
+	});
+		// window.onchange = Ancho;
+	
+	</script>
+</body>
+</html>
