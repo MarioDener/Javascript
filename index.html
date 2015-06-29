@@ -14,7 +14,7 @@
 	</style>
 </head>
 <body>
-	<a href="" class="option">Atras</a>
+	<a href="" class="atras">Atras</a>
 		<!-- <a href="" class="option">Adelante</a> -->
 	<nav id="nav">
 		<ul>
@@ -30,15 +30,17 @@
 			<li><a href="#">Link 10</a></li>
 		</ul>
 	</nav>
+	<a href="" class="Adelante">Adelante</a>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 	var elementoDiv = document.getElementById('nav');
 	function moverAbajo() {
-	elementoDiv.style.top = elementoDiv.offsetTop + 10 +"px";
+		elementoDiv.style.top = elementoDiv.offsetTop + 10 +"px";
+		console.log(elementoDiv.scrollHeight);
 	}
 
 	$(function(){
-		$(".option").click(function(event) {
+		$(".atras").click(function(event) {
 			event.preventDefault();
 			moverAbajo();
 		})
